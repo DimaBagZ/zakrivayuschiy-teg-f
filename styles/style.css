@@ -22,7 +22,9 @@
   background-color: var(--backgd-color);
   color: var(--text-color);
   font-variation-settings: "wght" var(--font-weight);
-  background: repeating-linear-gradient(to right, var(--background-gradient), transparent 2px), repeating-linear-gradient(to bottom, var(--background-gradient), transparent 2px),
+  background: 
+    repeating-linear-gradient(to right, var(--background-gradient) 0 2px, transparent 2px 4px), 
+    repeating-linear-gradient(to bottom, var(--background-gradient) 0 2px, transparent 2px 4px),
     repeating-linear-gradient(to bottom, var(--main-gradient-color) 0.01%, var(--other-gradient-color));
   background-attachment: fixed;
   background-size: cover;
@@ -33,7 +35,7 @@
   margin: auto;
   border: 2px solid var(--text-color);
   background-color: var(--backgd-color);
-  max-inline-size: 696px;
+  max-inline-size: 700px;
 }
 
 .header {
@@ -50,6 +52,8 @@
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   margin-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
   margin-block-end: 20px;
+  outline: none;
+  text-decoration: none;
 }
 
 .header__title {
@@ -57,13 +61,13 @@
 }
 
 .header__theme-menu {
-  margin-block: 25px;
+  margin-block: 24px;
 }
 
 .theme-menu__list {
   display: grid;
   gap: 10px;
-  padding-inline-start: 10px;
+  padding-inline-start: 17px;
 }
 
 .theme-menu__button {
@@ -148,8 +152,8 @@
 .card__label {
   position: absolute;
   z-index: 1;
-  inset-inline-end: 15px;
-  inset-block-start: 20px;
+  inset-inline-end: 28px;
+  inset-block-start: 26px;
   color: var(--text-color);
   font-family: var(--accent-font);
   font-size: 14px;
@@ -160,10 +164,10 @@
 
 .card__content {
   display: grid;
-  gap: 25px;
+  gap: 28px;
   padding: 25px 25px 0 25px;
   font-size: 18px;
-  line-height: calc(21 / 18);
+  font-variation-settings: normal;
   border-block-start: 2px solid var(--text-color);
 }
 
@@ -230,7 +234,7 @@
   box-shadow: 2px 2px 0px 0px var(--text-color);
 }
 
-.footer {
+.content__button__save-container {
   display: grid;
   place-items: center;
   padding: 50px;
@@ -256,6 +260,10 @@
   color: var(--text-button-color);
 }
 
+.button__upper {
+  text-transform: uppercase;
+}
+
 .button__icon {
   block-size: 21px;
   inline-size: 21px;
@@ -268,16 +276,13 @@
   inline-size: 39px;
 }
 
-.sparks {
-  opacity: 0;
-}
-
 .modal {
   padding: 25px 30px;
   max-inline-size: 353px;
   border: 2px solid var(--text-color);
   color: var(--text-color);
   font-family: var(--accent-font);
+  font-size: 14px;
   line-height: 1.5;
   text-transform: uppercase;
   background: var(--backgd-color);
@@ -292,13 +297,12 @@
 .modal__window {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 6px;
 }
 
 .modal__icon {
-  flex-shrink: 0;
-  inline-size: 39px;
-  block-size: 39px;
+  width: 38%;
+  height: 0%
 }
 
 .modal__window-button {
@@ -306,7 +310,8 @@
 }
 
 .modal::backdrop {
-  backdrop-filter: brightness(25%);
+  opacity: 0.75;
+  background: var(--backgd-accent-color, #000);
 }
 
 .filter-grayscale {
@@ -337,8 +342,28 @@
   filter: saturate(140%) hue-rotate(80deg) contrast(60%);
 }
 
+@media (width <= 375px) {
+  .card__label {
+    inset-inline-end: 11px;
+    inset-block-start: 22px;
+  }
+
+  .card__content {
+    line-height: 116.667%;
+  }
+
+  .modal__icon {
+    width: 49%;
+    height: 0%
+  }
+
+  .modal__window {
+    gap: 4px;
+  }
+}
+
 @media (width < 743px) {
-  .footer {
+  .content__button__save-container {
     padding-inline: 25px;
   }
 
@@ -352,14 +377,14 @@
   }
 
   .modal {
-    padding: 25px 28px;
+    padding: 29px 43px;
     max-inline-size: 341px;
   }
 }
 
 @supports ((-webkit-text-stroke: 1px var(--backgd-color)) or (text-stroke: 1px var(--backgd-color))) {
-  .card__img-label {
-    -webkit-text-stroke: 1px var(--backgd-color);
+  .card__label {
+    -webkit-text-stroke: 0.5px var(--backgd-color);
     text-stroke: 1px var(--backgd-color);
     text-shadow: none;
   }
