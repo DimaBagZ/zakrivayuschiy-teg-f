@@ -7,6 +7,8 @@
 :root.theme-light {
   --backgd-color: var(--white-color);
   --text-color: var(--backgd-accent-color);
+  --header-font-weight: var(--accent-font-weight);
+  --paragraph-font-weight: var(--font-weight);
   --background-gradient: var(--white-gradient-color);
   --main-gradient-color: var(--white-gradient-color);
   --other-gradient-color: var(--black-color);
@@ -15,10 +17,26 @@
   --sparks-color: var(--red-color);
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --backgd-color: var(--white-color);
+    --text-color: var(--backgd-accent-color);
+    --header-font-weight: var(--accent-font-weight);
+    --paragraph-font-weight: var(--font-weight);
+    --background-gradient: var(--white-gradient-color);
+    --main-gradient-color: var(--white-gradient-color);
+    --other-gradient-color: var(--black-color);
+    --text-button-color: var(--backgd-color);
+    --contour-color: var(--backgd-accent-color);
+    --sparks-color: var(--red-color);
+  }
+}
+
 :root.theme-dark {
   --backgd-color: var(--backgd-accent-color);
   --text-color: var(--accent-color);
-  --font-weight: var(--accent-font-weight);
+  --header-font-weight: var(--dark-fonth-weight);
+  --paragraph-font-weight: var(--dark-fontp-weight);
   --background-gradient: var(--backgd-accent-color);
   --main-gradient-color: var(--green-color);
   --other-gradient-color: var(--dark-green-color);
@@ -31,7 +49,8 @@
   :root {
     --backgd-color: var(--backgd-accent-color);
     --text-color: var(--accent-color);
-    --font-weight: var(--accent-font-weight);
+    --header-font-weight: var(--dark-fonth-weight);
+    --paragraph-font-weight: var(--dark-fontp-weight);
     --main-gradient-color: var(--green-color);
     --background-gradient: var(--backgd-accent-color);
     --other-gradient-color: var(--dark-green-color);
