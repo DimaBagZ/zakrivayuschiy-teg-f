@@ -118,18 +118,24 @@ npx serve .
 ## Скриншоты
 
 ### 🌙 Темная тема
+<img width="1892" height="921" alt="image" src="https://github.com/user-attachments/assets/5073f7fa-3285-453f-8d57-945a14f0f61e" />
 
 _Интерфейс в темной теме с неоновыми акцентами_
 
 ### ☀️ Светлая тема
+<img width="1896" height="921" alt="image" src="https://github.com/user-attachments/assets/d8526c1f-0865-430a-b7f2-a085ffe1ac89" />
 
 _Интерфейс в светлой теме с мягкими цветами_
 
 ### 💖 Анимации лайков
+<img width="687" height="564" alt="image" src="https://github.com/user-attachments/assets/db123ba6-ca38-40f8-90da-136f5d211226" />
 
 _Интерактивные анимации и эффекты_
 
 ### Адаптивная верстка
+<img width="631" height="923" alt="image" src="https://github.com/user-attachments/assets/ff2a51ab-e045-47e0-aeb8-e0fdc888e6a4" />
+<img width="770" height="909" alt="image" src="https://github.com/user-attachments/assets/9022d468-8f56-4b66-acdc-1ccd5b6bd95b" />
+
 
 _Адаптивное отображение на разных устройствах_
 
